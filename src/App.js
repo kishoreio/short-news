@@ -1,26 +1,24 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Header from './Components/Header';
+import NavList from './Components/NavList';
+import Post from './Components/Post';
+import { HashRouter, Route } from 'react-router-dom';
+import Footer from './Components/Footer';
+ 
+const App = () =>{
+  return(
+    <HashRouter>
+      <div>
+        <Header />
+        <NavList />
+        <Route exact path='/' component={Post} />
+        <Route path='/health' component={Post}/>
+        <Route path='/science' component={Post}/>
+        <Route path='/sports' component={Post}/>
+        <Route path='/technology' component={Post}/>  
+        <Footer />
+      </div>
+    </HashRouter>
+  )
 }
-
 export default App;
