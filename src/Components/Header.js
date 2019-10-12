@@ -5,7 +5,7 @@ const Header = () => {
     return(
         <>
             <Navbar bg="success" variant="dark">
-                <Navbar.Brand href="/">
+                <Navbar.Brand href="https://kishorecodes.github.io/short-news/">
                 <img
                     alt="logo"
                     src="https://purepng.com/public/uploads/thumbnail//google-stadia-logo-hd4.png"
